@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dump-truck"
+    }
+  },
+  "defaultProject": "dump-truck",
+  "cli": {
+    "analytics": false
+  }
 }
