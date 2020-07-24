@@ -13,10 +13,14 @@ export class NotepadComponent implements OnInit {
   constructor(private noteService: NotesService) { }
 
   ngOnInit(): void {
+    
   }
 
-  addNote(noteContent: string){
-    let tempId=9999;
-    let newNote = new Note(tempId, noteContent);
-    this.noteService.addNote(newNote).subscribe(note => {this.notes.push(note);});
+
+
+  addNote(noteContent : string){
+    let newNote = new Note(9999, noteContent);
+    this.noteService.addNote(newNote ).subscribe(note => {this.noteService.notes.push(note);});
+  }
+
 }

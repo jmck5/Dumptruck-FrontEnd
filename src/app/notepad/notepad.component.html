@@ -1,5 +1,6 @@
-<h3> Dump Truck Notes</h3>
+<div id="notepad-core">
 <h5> Make a note</h5>
-<textarea [(ngModel)]="noteContent.name"></textarea>
+<textarea #noteContent></textarea>
 <br>
-<button (click)="addNote()">Post</button>
+<button (click)="addNote(noteContent.value); noteContent.value=''">Post</button>
+</div>
