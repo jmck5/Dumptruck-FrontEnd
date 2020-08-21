@@ -1,2 +1,2 @@
 <h1> All Notes </h1>
-<p *ngFor="let note of notes" class="eachNote"> <span class="noteId">#{{note.id}}.</span> {{note.content}}</p>
+<p *ngFor="let note of notes" class="eachNote"> <span class="noteId">#{{note.id}}.</span> {{note.content}}<button class="delete" title="delete note" (click)="deleteNote(note)">x</button></p>

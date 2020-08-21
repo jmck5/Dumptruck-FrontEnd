@@ -29,4 +29,10 @@ export class NotesService {
   addNote(newContent: Note): Observable<any>{
     return this.http.post<Note>(this.notesUrl+"/addnote", newContent, this.httpOptions)
   }
+
+  deleteNote(note: Note): Observable<Note>{
+    const id = note.id;
+    const url = `${this.notesUrl}/${id}`;
+    return this.http.delete<Note>(url, this.httpOptions);
+  }
 }
