@@ -6,10 +6,11 @@ import { BaseComponent} from './base/base.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path:'', component: BaseComponent},
+  {path:'', component: LoginComponent},
   {path:'notepad', component: NotepadComponent},
   {path:'allnotes', component: AllNotesComponent},
-  {path:'login', component: LoginComponent}
+  {path:'login', component: LoginComponent},
+  {path:'home', component: BaseComponent}
 ];
 
 @NgModule({

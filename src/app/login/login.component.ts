@@ -13,6 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 export class LoginComponent implements OnInit {
   
+  loggedin: boolean;
   form: FormGroup;
 
   constructor(private fb:FormBuilder, private authservice: AuthService, private router: Router) 
@@ -21,9 +22,12 @@ export class LoginComponent implements OnInit {
       username:['',Validators.required],
       password:['',Validators.required]
     });
+
+    this.loggedin = false;
    }
 
   ngOnInit(): void {
+    if(this.loggedin) this.router.navigateByUrl('/home');
   }
 
   login(){
@@ -33,9 +37,10 @@ export class LoginComponent implements OnInit {
       console.log("Input is valid not necessarily correct")
       this.authservice.login(val.username, val.password).subscribe(
         res=>{
-          this.authservice.setSession(res)
+          this.authservice.setSession(res);
+          this.loggedin = true;
           console.log("User is logged in");
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/home');
         }
       );
     }

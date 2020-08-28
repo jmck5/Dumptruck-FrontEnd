@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class NotesService {
   //Will need to detect and set each time
-  private notesUrl ='http://localhost:3000/api/dumptruck';
+  private notesUrl ='http://192.168.1.73:3000/api/dumptruck';
   httpOptions = {headers: new HttpHeaders({'Content-Type':'application/json'})}
   notes: Note[];
 
