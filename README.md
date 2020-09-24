@@ -1,27 +1,13 @@
 # DumpTruck
+Dump truck is a note taking app of which this is the Angular frontend. It communicates via a REST API with the backend. 
+At present a user can add and delete short text messages. There is a rudimentary login system that uses Json web tokens to check if a user is logged in. 
+Note at present the app is only designed for a single user and the login system is very insecure. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.11.
+ToDo
+Order the notes by my recent, and filter/search for notes containing certain words. 
+Produce a downloadable text file summary.
+Summarise notes only containing keywords.
+Implement refresh tokens.
+Implement multiple users
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
