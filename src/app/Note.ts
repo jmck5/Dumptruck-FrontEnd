@@ -1,12 +1,14 @@
 export class Note {
     id: number;
-    content: string;
+    NoteContent: string;
+    NoteAuthor: string;
     timestamp: any;
     
     constructor(id: number, content: string, timestamp="blank"){
         this.id = id,
-        this.content=content,
+        this.NoteContent=content,
         this.timestamp = this.timestamp
+        
     }
     
 }

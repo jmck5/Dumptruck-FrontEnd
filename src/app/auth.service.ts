@@ -15,17 +15,17 @@ export class AuthService {
 
   //I'm not sure what shareReplay is
   login(username: string, password:string){
-    return this.http.post<User>('http://localhost:3000/api/login', {username, password})
+    return this.http.post<User>('http://192.168.1.73:58156/api/login', {username, password})
   }
 
   setSession(authResult){
     const expiresAt = moment().add(authResult.expiresIn,'second');
-    localStorage.setItem('id_token', authResult.idToken);
+    localStorage.setItem('accessToken', authResult.accessToken);
     localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
   }
 
   logout(){
-    localStorage.removeItem("id_token");
+    localStorage.removeItem("accesstoken");
     localStorage.removeItem("expires_at");
   }
 
