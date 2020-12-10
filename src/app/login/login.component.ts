@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
         res=>{
           this.authservice.setSession(res);
           this.loggedin = true;
+          res.username;
           console.log("User is logged in");
           this.router.navigateByUrl('/home');
         }

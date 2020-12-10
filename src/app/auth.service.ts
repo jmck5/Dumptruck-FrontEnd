@@ -20,6 +20,7 @@ export class AuthService {
 
   setSession(authResult){
     const expiresAt = moment().add(authResult.expiresIn,'second');
+    localStorage.setItem('userName', authResult.userName)
     localStorage.setItem('accessToken', authResult.accessToken);
     localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
   }
@@ -27,6 +28,7 @@ export class AuthService {
   logout(){
     localStorage.removeItem("accesstoken");
     localStorage.removeItem("expires_at");
+    localStorage.removeItem("userName")
   }
 
   public isLoggedIn(){
