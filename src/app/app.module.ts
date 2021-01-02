@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {TokenInterceptor } from './token.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FilteredNotesComponent } from './filtered-notes/filtered-notes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     NotepadComponent,
     AllNotesComponent,
     BaseComponent,
-    LoginComponent
+    LoginComponent,
+    FilteredNotesComponent
   ],
   imports: [
     BrowserModule,

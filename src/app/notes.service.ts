@@ -28,6 +28,10 @@ export class NotesService {
     return this.http.get<Note[]>(this.notesUrl+"/notes");
   }
 
+  getNoteByKeyword(word: String): Observable<Note[]>{
+    return this.http.get<Note[]>(this.notesUrl+"/notes/word?myword="+word)
+  }
+
   addNote(newContent: Note): Observable<any>{
     return this.http.post<Note>(this.notesUrl+"/notes", newContent, this.httpOptions)
   }

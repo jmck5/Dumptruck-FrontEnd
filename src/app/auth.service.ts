@@ -3,19 +3,20 @@ import {HttpClient } from '@angular/common/http';
 import  {Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 import * as moment  from 'moment/moment';
+import { environment  } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  
+  baseUrl = environment.baseUrl;
   constructor( private http :HttpClient) { 
     
   }
 
   //I'm not sure what shareReplay is
   login(username: string, password:string){
-    return this.http.post<User>('http://192.168.1.73:58156/api/login', {username, password})
+    return this.http.post<User>(this.baseUrl+'/login', {username, password})
   }
 
   setSession(authResult){

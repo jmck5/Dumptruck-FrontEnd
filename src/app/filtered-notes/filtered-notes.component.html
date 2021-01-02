@@ -1,0 +1,5 @@
+<p>filtered-notes works!</p>
+
+<input #word>
+<button (click)="getNotesByKeyword(word.value)">Find</button>
+<p *ngFor="let note of filteredNotes">{{note.noteContent}}</p>
