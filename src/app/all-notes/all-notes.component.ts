@@ -28,4 +28,9 @@ export class AllNotesComponent implements OnInit {
     this.noteService.notes = this.noteService.notes.filter(n=>n!=note);
     this.noteService.deleteNote(note).subscribe();
   }
+
+  downloadAllText(): any{
+    console.log("Something wicked this way comes")
+    this.noteService.downloadAll();
+  }
 }

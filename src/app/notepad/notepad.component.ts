@@ -17,8 +17,6 @@ export class NotepadComponent implements OnInit {
     this.author = localStorage.getItem("userName");
   }
 
-
-
   addNote(noteContent : string){
     console.log(localStorage.getItem("accessToken"));
     console.log("The author is " + this.author);

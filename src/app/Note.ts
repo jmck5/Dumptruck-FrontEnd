@@ -1,15 +1,17 @@
 export class Note {
     id: number;
-    NoteContent: string;
-    NoteAuthor: string;
-    timestamp: any;
+    noteContent: string;
+    user: string;
+    score: number;
+    timeStamp: any;
     
     constructor(id: number, content: string, author: string){
         this.id = id,
-        this.NoteContent=content,
+        this.noteContent=content,
         //this.timestamp = this.timestamp,
-        this.NoteAuthor = author
-        
+        this.user = author,
+        this.score = 0,
+        this.timeStamp = null
     }
     
 }

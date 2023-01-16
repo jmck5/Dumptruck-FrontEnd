@@ -16,7 +16,7 @@ export class AuthService {
 
   //I'm not sure what shareReplay is
   login(username: string, password:string){
-    return this.http.post<User>(this.baseUrl+'/login', {username, password})
+    return this.http.post<string>(this.baseUrl+'/login', {username, password})
   }
 
   setSession(authResult){
