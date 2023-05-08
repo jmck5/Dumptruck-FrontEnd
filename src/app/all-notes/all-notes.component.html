@@ -1,3 +1,3 @@
-<button (click)="downloadAllText()">Download Text</button>
+<!-- <button (click)="downloadAllText()">Download Text</button> -->
 <h1> All Notes </h1>
 <p *ngFor="let note of notes" class="eachNote"> <span class="noteId">#{{note.id}}.</span>&emsp;{{note.noteContent}}&emsp;<button class="delete" title="delete note" (click)="deleteNote(note)">x</button></p>

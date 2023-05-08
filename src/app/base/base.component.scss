@@ -1,0 +1,22 @@
+.logoutButton { 
+    display: flex;
+    justify-content: flex-end;
+margin-right: 20px;
+margin-bottom: 5px;}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .container{
+        max-width: 98%;
+        margin: auto
+    }
+    
+}
+
+all-notes{
+
+}

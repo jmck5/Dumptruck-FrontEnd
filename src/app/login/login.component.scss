@@ -1,0 +1,41 @@
+.subcontainer{
+    border-radius: 5px;
+    width:400px;
+}
+
+.container{
+    border: solid black 2px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+form {
+    background-color: rgb(195, 182, 0);
+    margin: 10px;
+    padding: 5px 10px;
+    align-content: center;
+}
+.form-field {
+    align-content: center;
+
+}
+.logoImage {
+    align-content: center;
+    max-width: 102%;
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        border: none;
+
+        max-width: 90%;
+        margin: auto
+    }
+    .logoImage {
+        padding-left: 30px;
+        max-width: 300px;
+        margin: auto;
+    }
+    
+}
+
