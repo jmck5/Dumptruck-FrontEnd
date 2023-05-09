@@ -8,19 +8,29 @@ import { AllNotesComponent } from './all-notes/all-notes.component';
 import { BaseComponent } from './base/base.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { LoginComponent } from './login/login.component';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {TokenInterceptor } from './token.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FilteredNotesComponent } from './filtered-notes/filtered-notes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NotepadComponent,
     AllNotesComponent,
-    BaseComponent
+    BaseComponent,
+    LoginComponent,
+    FilteredNotesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass:TokenInterceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

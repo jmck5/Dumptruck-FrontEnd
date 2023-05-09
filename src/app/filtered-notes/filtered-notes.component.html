@@ -1,0 +1,12 @@
+<h3>Filter</h3>
+
+<input #word>
+<button (click)="getNotesByKeyword(word.value)">Find</button>
+<div id="filtered-results">
+    <h5>Filtered Results: </h5>
+<p *ngFor="let note of filteredNotes">{{note.noteContent}}</p>
+</div>
+<!-- <button (click)="downloadAllText">Download Text</button><br/>
+<a href={{consolidatedUrl}}>Download your notes here instead</a><br/> -->
+
+<!--<button (click)="downloadByKeyword(word.value)">Whatever</button><br/> -->

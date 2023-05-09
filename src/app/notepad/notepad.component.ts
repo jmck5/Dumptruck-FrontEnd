@@ -9,17 +9,18 @@ import { Note } from '../Note';
 })
 
 export class NotepadComponent implements OnInit {
-  
+  author: string;
+
   constructor(private noteService: NotesService) { }
 
   ngOnInit(): void {
-    
+    this.author = localStorage.getItem("userName");
   }
 
-
-
   addNote(noteContent : string){
-    let newNote = new Note(9999, noteContent);
+    console.log(localStorage.getItem("accessToken"));
+    console.log("The author is " + this.author);
+    let newNote = new Note(9999, noteContent, this.author);
     this.noteService.addNote(newNote ).subscribe(note => {this.noteService.notes.push(note);});
   }
 
